@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- how would I write a function to say hello -->
+<video id="web_intro" src="../../static/videos/marvel_intro.mp4" controls autoplay muted>
+    Your browser does not support the video tag.
+</video>  
+
+<div class="container" id="main-body">
+    <!-- Header Section -->
+    <div id="comic-img">
+        <header class="row">
+            <div class="col-12 col-md-6" id="header-text">
+                <h2>Let's build the future Marvel together!</h2>
+                <h5>Create an amazing API tool for Marvel fans.</h5>
+            <div>
+                <button class="btn btn-primary">View Our Docs</button>
+                <button class="btn btn-primary">Join Our Slack</button>
+            </div>
+            </div>
+            <!-- Header Image -->
+            <div class="col-12 col-md-6">
+                <img src="../../static/images/marvel_logo.png" alt="Hero Header Image" class="header-image">
+            </div>
+        </header>
+        <!-- End of Header -->
+
+        <!-- Middle Section/Body -->
+        <section class="row">
+            <div class="col-12" id="middle-text">
+                <h2>Display Your Collection!</h2>
+                <p>You can harness the power of an API to expand your collection!</p>
+            </div>
+        </section>
+        <!-- End of middle section -->
+        
+        <!-- Collection of Features -->
+        <section class="row" id="features-section">
+            <div class="col-12 col-md-4">
+                <img src="../../static/images/spiderman-comic.jpg" alt="API Image" class="book-image">
+                <h4>Dedicated API Route</h4>
+                <p>
+                    If you are a fan of using traditional API routes, we have those for you!
+                </p>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <img src="../../static/images/defenders-comic.jpg" alt="GraphQL Image" class="book-image">
+                <h4>GraphQL API Route</h4>
+                <p>
+                    If you want all data from one endpoint, we have that too!
+                </p>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <img src="../../static/images/avengers-comic.jpg" alt="Database Image" class="book-image">
+                <h4>Backed by a PostgresQL</h4>
+                <p>
+                    All data will be persisted inside of a secure Postgres Database
+                </p>
+            </div>
+        </section>
+        <!-- End of Collection of Features -->
+
+        <!-- Community Section -->
+        <section class="row">
+            <div class="col-12 col-md-6">
+                <img src="../../static/images/infinity-comic.jpg" alt="Comic Image" id="Comic-image">
+            </div>
+
+            <div class="col-12 col-md-6">
+                <h4>Talk with like minded Marvel fanatics</h4>
+                <p>Talk with other devs around the world and collab on projects with your data. Join our Slack channel
+                    and give the project a star on Github
+                </p>
+                <div>
+                    <button class="btn btn-primary">View On Github</button>
+                    <button class="btn btn-primary">Join Our Slack Channel</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+        <!-- End of Community Section -->
+
+    <!-- Start of Footer -->
+<div class="container">
+    <footer class="row" id="footer">
+        <div class="col-2 col-md-2">
+            <img src="../../static/images/marvel_logo.png" alt="footer logo" id="footer-logo">
+        </div>
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Platform</h4>
+                <p>Why Marvel?</p>
+                <p>The Marvel Comic Project</p>
+                <p>Donate</p>
+                <p>Spread the Word</p>
+                <p>Our Process</p>
+            </div>
+        </div>
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Platform</h4>
+                <p>Why Marvel?</p>
+                <p>The Marvel Comic Project</p>
+                <p>Donate</p>
+                <p>Spread the Word</p>
+                <p>Our Process</p>
+            </div>
+        </div>
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Platform</h4>
+                <p>Why Marvel?</p>
+                <p>The Marvel Comic Project</p>
+                <p>Donate</p>
+                <p>Spread the Word</p>
+                <p>Our Process</p>
+            </div>
+        </div>
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Platform</h4>
+                <p>Why Marvel?</p>
+                <p>The Marvel Comic Project</p>
+                <p>Donate</p>
+                <p>Spread the Word</p>
+                <p>Our Process</p>
+            </div>
+        </div>
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Platform</h4>
+                <p>Why Marvel?</p>
+                <p>The Marvel Comic Project</p>
+                <p>Donate</p>
+                <p>Spread the Word</p>
+                <p>Our Process</p>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+{% endblock content %}

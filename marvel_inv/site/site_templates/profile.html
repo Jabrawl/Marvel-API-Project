@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% with messages = get_flashed_messages(with_categories = True) %}
+    {% if messages %}
+        {% for cat, msg in messages %}
+            {% if cat == 'auth-success' %}
+            <div class="container">
+                {{ msg }}
+                <button type="button" class="close" data-dismiss = "alert", onclick="this.parentElement.style.display='none'">&times;</button>
+            </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+
+<header class="hero-section">
+    <h3 class="header-text">Welcome to your very own Marvel Collection, {{ current_user.first_name }}</h3>
+    <main class="container drone_form">
+    <div class="row">
+        <aside class="col-12 col-md-6">
+            <h2>Create a Character!</h2>
+            {% include 'char_form.html' %}
+        </aside>
+    </div>
+</main>
+
+
+
+
+</header>
+
+<div class="container">
+    <h3>Here are your profile details:</h3>
+    <li class="list-group-item">Email: {{ current_user.email }}</li>
+    <li class="list-group-item">Token: {{ current_user.token }}</li>
+    <div class="row">
+        {% for hero in heros %}
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../../static/images/blank-hero.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ hero.name }}</h5>
+                <h5 class="card-title">{{ hero.role }}</h5>
+                <p class="card-text">{{ hero.description }}</p>
+                <p>{{ hero.power }}</p>
+                <p>{{ hero.date }}</p>
+            </div>     
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+
+{% endblock content %}
